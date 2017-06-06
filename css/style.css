@@ -1,0 +1,356 @@
+:root {
+  --opacity: 1;
+  --top: 0px;
+  --left: 0px;
+  --scale: 1;
+  --rotate: 0deg;
+  --rotatey: 0deg;
+  --skew: 0deg;
+  --borderR: 0%;
+  --color: #000000;
+  --bgColor: #FFFFFF;
+  --bodyBgColor: #FFFFFF;
+  --boxShadow: 0px;
+  --boxShadowBlur: 0px;
+  --boxShColor: #000000;
+  --slider: #ffffff;
+  --thumb: #ffffff;
+  --thumbF: #ffffff;
+  --sliderF: #ffffff;
+  --borderW: 1px;
+  --borderS: solid;
+  --borderC: #000000;
+  --padding: 10px;
+  --height: 100px;
+  --width: 150px;
+  --fontSize: 16px;
+  --textAlign: left;
+  --lineH: 1;
+  --letterSpacing: 0px;
+  --fontFamily: Arial;
+  --textOutlineColor: #FFFFFF;
+  --textShadowSize: 0px;
+  --textShadowBlur: 0px;
+  --textShadowColor: #000000;
+  --outlineSize: 0px;
+  --outlineStyle: solid;
+  --outlineColor: #000000;
+  --outlineOffset: 0px;
+}
+
+
+
+/*END CSS VARIABLES*/
+
+body {
+  position: absolute;
+  background-color: var(--bodyBgColor);
+  font-family: ;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+#panelTitle {
+  font-size: 16px;
+  margin: 12px 0 0 5px;
+}
+
+#helpButton {
+  height: 30px;
+  margin: 10px 10px 0 0;
+}
+
+#testBox {
+  padding: var(--padding);
+  height: var(--height);
+  width: var(--width);
+  border: var(--borderW) var(--borderS) var(--borderC);
+  border-radius: var(--borderR);
+  position: relative;
+  background-color: var(--bgColor);
+  transform: rotate(var(--rotate)) scale(var(--scale)) rotatey(var(--rotatey)) skew(var(--skew));
+  top: calc(var(--top) - 300px);
+  left: calc(var(--left) + 400px);
+  opacity: var(--opacity);
+  box-shadow: calc(var(--boxShadow) + var(--outlineSize)) calc(var(--boxShadow) + var(--outlineSize)) var(--boxShadowBlur) var(--boxShColor);
+  overflow: auto;
+  outline: var(--outlineSize) var(--outlineStyle) var(--outlineColor);
+  outline-offset: var(--outlineOffset);
+  transition: visibility 1.5s linear;
+}
+
+#testType {
+  font-size: var(--fontSize);
+  color: var(--color);
+  text-align: var(--textAlign);
+  line-height: var(--lineH);
+  font-family: var(--fontFamily);
+  text-shadow: var(--textOutlineColor) 1px 0px 0px, var(--textOutlineColor) 0.540302px 0.841471px 0px, var(--textOutlineColor) -0.416147px 0.909297px 0px, var(--textOutlineColor) -0.989992px 0.14112px 0px, var(--textOutlineColor) -0.653644px -0.756802px 0px, var(--textOutlineColor) 0.283662px -0.958924px 0px, var(--textOutlineColor) 0.96017px -0.279415px 0px, var(--textShadowSize) var(--textShadowSize) var(--textShadowBlur) var(--textShadowColor);
+  letter-spacing: var(--letterSpacing);
+}
+
+#wrapper {
+  flex-direction: row;
+  width: 360px;
+  height: 600px;
+  overflow: auto;
+  position: relative;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  background-color: white;
+  margin: 10px 0 0 10px;
+  opacity:1;
+  transition: all 1.5s linear;
+}
+
+.flexRow {
+  display: flex;
+  padding: 2px 2px 0 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-size: 12px;
+  padding: 2px;
+}
+
+.valueDisplay {
+  border: 1px solid black;
+  font-size: 11px;
+  padding: 1px;
+  margin-left: 3px;
+  background-color: #EEEEEE;
+}
+
+#button1 {
+  margin-left: 60px;
+  margin-top: 5px;
+}
+
+#codeButton {
+  height:30px;
+  margin-top:10px;
+}
+
+.section {
+  font-size: 14px;
+  padding: 4px 0 4px 5px;
+  background-color: lightgray;
+  display: flex;
+}
+
+.hrBottom {
+  margin-top: 0;
+}
+
+.hrTop {
+  margin-bottom: 0;
+}
+
+#borderS {
+  margin-bottom: 2px;
+}
+
+#text {
+  margin-top: 4px;
+  padding-top: 4px;
+  margin-right: 10px;
+  padding-bottom: 4px;
+  width: 75%;
+}
+
+/*INPUT RANGE CSS MESS*/
+/*WEBKIT EQUALS ME*/
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: var(--thumb);
+  border: 1px solid black;
+  height: 6px;
+  width: 15px;
+  border-radius: 4px;
+  box-shadow: .5px .5px .5px #000000, 0px 0px .5px #0d0d0d;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: .5px .5px .5px #000000, 0px 0px .5px #0d0d0d;
+  background: var(--slider);
+  border-radius: 2px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  transform: rotate(90deg) scale(1.5);
+  background-color: var(--thumbF);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--sliderF);
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/*FIREFOX AND IE*/
+
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: var(--thumb);
+  border: 1px solid black;
+  height: 15px;
+  width: 6px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: var(--thumb);
+  border: 1px solid black;
+  height: 15px;
+  width: 6px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: var(--slider);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--sliderF);
+}
+
+input[type=range]::-ms-fill-upper {
+  background: var(--thumb);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--thumbF);
+}
+/*END OF INPUT RANGE CSS*/
+
+/*START COLOR PICKER*/
+
+input[type=color] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: lightgrey;
+  border-radius: 30px;
+  border: 1px solid black;
+  margin: 2px;
+  width: 50px;
+}
+
+input[type=color]:focus {
+  outline: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper{
+  width:50px;
+  padding:0;
+}
+
+input[type=color]::-webkit-color-swatch{
+  border:transparent;
+  border-radius:20px;
+}
+
+input[type=color]::-moz-color-swatch{
+   width:50px;
+   padding:0;
+}
+
+input[type=color]::-moz-focus-inner{
+  border:transparent;
+  border-radius:20px;
+}
+/*END COLOR PICKER DEBACLE*/
+
+/*STYLE FOR OUTPUT CODE THAT USER CREATES*/
+#output {
+  border: 3px solid black;
+  position: absolute;
+  top: -5px;
+  left: 400px;
+  opacity: 0;
+  transition: all 2s linear;
+  background-color: #EEEEEE;
+  padding:0 0 12px 10px;
+}
+
+/*HELP MENU MODAL */
+#help {
+  width: 720px;
+  height: 500px;
+  overflow: auto;
+  position: absolute;
+  top:100px;
+  left:75%;
+  opacity:0;
+  border: 3px solid black;
+  background-color: white;
+  padding: 0 4px 0 4px;
+  z-index:-1;
+  transition: all 2s linear;
+}
+#modal p {
+  font-size:14px;
+  text-align:justify;
+  padding:0 5px 0 5px;
+ 
+}
+#modal>div{
+  border:1px solid black;
+  margin-bottom:5px;
+  background-color:#EEEEEE;
+}
+
+.backLink{
+float:right;
+margin:5px 5px 0 0;
+}
+
+div>h3 {
+  text-decoration:underline;
+}

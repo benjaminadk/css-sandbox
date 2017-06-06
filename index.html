@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Sanbox</title>
+  <link href="https://fonts.googleapis.com/css?family=Aladin|Barrio|Poiret+One|Reenie+Beanie|Satisfy|Special+Elite|Princess+Sofia" rel="stylesheet">
+
+
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--MAIN CONTROL PANEL-->
+<!--EACH INPUT IS SEPERATED BY AN EMPTY LINE-->
+<div id='wrapper'>
+  
+  <div class='titleWrap'>
+    <p id='panelTitle'>CSS SANDBOX</p>
+    <input type="button" id='codeButton' onclick='toggleCode()' value='SHOW CODE' name='codeButton'>
+    <input type='button' id='helpButton' onclick='toggleHelp()' value='SHOW HELP' name='helpButton'>
+    </div>
+  
+  <hr class='hrTop'>
+  <span class='section'>DIMENSION AND POSITION</span>
+  <hr class='hrBottom'>
+  
+  <div class='flexRow'>
+  <label for='height'>HEIGHT:<span id='heightDisplay'class='valueDisplay'>100px</span></label>
+  <input id='height' type='range' name='height' min='20' max='450' step='1' value='100' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='width'>WIDTH:<span id='widthDisplay'class='valueDisplay'>150px</span></label>
+  <input id='width' type='range' name='width' min='20' max='650' step='1' value='150' data-sizing='px'>
+    </div>
+   
+  <div class='flexRow'>
+  <label for='padding'>PADDING:<span id='paddingDisplay'class='valueDisplay'>10px</span></label>
+<input id='padding' type='range' name='padding' min='0' max='50' step='1' value='10' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='top'>TOP:<span id='topDisplay'class='valueDisplay'>10px</span></label>
+  <input id='top' type='range' name='top' min='-500' max='500' step='5' value='0' data-sizing='px'>
+    </div>
+  
+   <div class='flexRow'>
+  <label for='left'>LEFT:<span id='leftDisplay'class='valueDisplay'>0px</span></label>
+<input id='left' type='range' name='left' min='0' max='1000' step='5' value='0' data-sizing='px'>
+    </div>
+  
+   <div class='flexRow'>
+  <label for='scale'>SCALE:<span id='scaleDisplay'class='valueDisplay'>1</span></label>
+<input id='scale' type='range' name='scale' min='0' max='5' step='.25' value='1'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='rotate'>ROTATE:<span id='rotateDisplay'class='valueDisplay'>0deg</span></label>
+<input id='rotate' type='range' name='rotate' min='0' max='720' step='1' value='0' data-sizing='deg'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='rotatey'>ROTATE-Y:<span id='rotateyDisplay'class='valueDisplay'>0deg</span></label>
+<input id='rotatey' type='range' name='rotatey' min='0' max='360' step='1' value='0' data-sizing='deg'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='skew'>SKEW:<span id='skewDisplay'class='valueDisplay'>0deg</span></label>
+<input id='skew' type='range' name='skew' min='0' max='360' step='1' value='0' data-sizing='deg'>
+    </div>
+  
+  <hr class='hrTop'>
+  <span class='section'>COLOR PROPERTIES</span>
+  <hr class='hrBottom'>
+  
+  <div class='flexRow'>
+  <label for='bodyBgColor'>BODY BACKGROUND-COLOR:</label>
+<input id='bodyBgColor' type='color' name='bodyBgColor' value='#FFFFFF'list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='bgColor'>BOX BACKGROUND-COLOR:</label>
+<input id='bgColor' type='color'name='bgColor' value='#FFFFFF' list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='opacity'>OPACITY:<span id='opacityDisplay'class='valueDisplay'>1</span></label>
+  <input id='opacity' type='range' name='opacity' min='0' max='1' step='.1' value='1'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='boxShadow'>BOX-SHADOW:<span id='boxShadowDisplay'class='valueDisplay'>0px</span></label>
+  <input id='boxShadow' type='range' name='boxShadow' min='0' max='30' step='1' value='0' data-sizing='px'>
+  </div>
+  
+  <div class='flexRow'>
+  <label for='boxShadowBlur'>BOX-SHADOW-BLUR:<span id='boxShadowBlurDisplay'class='valueDisplay'>0px</span></label>
+  <input id='boxShadowBlur' type='range' name='boxShadowBlur' min='0' max='20' step='1' value='0' data-sizing='px'>
+  </div>
+  
+  <div class='flexRow'>
+  <label for='boxShColor'>BOX-SHADOW COLOR:</label>
+<input id='boxShColor' type='color' name='boxShColor' value='#000000'list='MasterC'>
+  </div>
+  
+  <div class='flexRow'>
+  <label for='slider'>SLIDER-TRACK / FOCUS:</label>
+<input id='slider' type='color' name='slider' value='#ffffff' list='MasterC'>
+    <input id='sliderF' type='color' name='sliderF' value='#ffffff' list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='thumb'>SLIDER-THUMB / FOCUS:</label>
+<input id='thumb' type='color' name='thumb' value='#FFFFFF'list=masterC>
+    <input id='thumbF' type='color' name='thumbF' value='#FFFFFF' list='MasterC'>
+    </div>
+  
+  <hr class='hrTop'>
+  <span class='section'>TEXT PROPERTIES</span>
+  <hr class='hrBottom'>
+  
+  <div class='flexRow'>
+  <label for='text'>TEXT:</label>
+<input id='text' type='text' name='text' value='CSS SANDBOX' maxlength='100'>
+    </div>
+  
+  <div class='flexRow'>
+<input id='button1' type='button' name='button1' value='CLICK TO CHANGE TEXT' onclick='changeText()'>
+</div>
+  
+  <div class='flexRow'>
+  <label for='fontSize'>FONT-SIZE:<span id='fontSizeDisplay'class='valueDisplay'>16px</span></label>
+<input id='fontSize' type='range' name='fontSize' min='2' max='100' step='1' value='16' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+   <label for='fontFamily'>FONT-FAMILY:</label>
+  <select name="fontFamily" id='fontFamily' onclick='fontFamilyAsign()'>
+    <optgroup label='<-BASIC FONTS->'></optgroup>
+    <option value="Arial">ARIAL</option>
+    <option value="Times New Roman">TIMES NEW ROMAN</option>
+    <option value="comic sans ms">COMIC SANS MS</option>
+    <option value="Roboto">ROBOTO</option>
+    <option value="arial black">ARIAL BLACK</option>
+    <optgroup label='<-GOOGLE FONTS!->'></optgroup>
+    <option value="satisfy">SATISFY</option>
+    <option value="princess">PRINCESS SOFIA</option>
+    <option value="satisfy">ALADIN</option>
+    <option value="barrio">BARRIO</option>
+    <option value="poriet one">POIRET ONE</option>
+    <option value="reenie beanie">REENIE BEANIE</option>
+    <option value="special elite">SPECIAL ELITE</option>
+  </select>
+   </div>
+  
+  <div class='flexRow'>
+  <label for='color'>TEXT COLOR:</label>
+<input id='color' type='color' name='color' value='#000000'draggable="true" list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='textOutlineColor'>TEXT-OUTLINE COLOR:</label>
+    <button id='textOutlineButton' onclick='outlineDis()'>TOGGLE-ON</button>
+<input id='textOutlineColor' type='color' name='textOutlineColor' value='#FFFFFF' list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+   <label for='textAlign'>TEXT-ALIGN:</label>
+  <select name="textAlign" id='textAlign' onclick='alignText()'>
+    <option value="left">LEFT</option>
+    <option value="center">CENTER</option>
+    <option value="right">RIGHT</option>
+    <option value="justify">JUSTIFY</option>
+    <option value="justify-all">JUSTIFY-ALL</option>
+  </select>
+   </div>
+  
+  <div class='flexRow'>
+  <label for='lineH'>LINE-HEIGHT:<span id='lineHDisplay'class='valueDisplay'>1</span></label>
+<input id='lineH' type='range' name='lineH' min='0' max='5' step='.1' value='1'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='letterSpacing'>LETTER-SPACING:<span id='letterSpacingDisplay'class='valueDisplay'>1</span></label>
+<input id='letterSpacing' type='range' name='letterSpacing' min='-10' max='10' step='.5' value='0' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='textShadowSize'>TEXT-SHADOW-OFFSET:<span id='textShadowSizeDisplay'class='valueDisplay'>0px</span></label>
+<input id='textShadowSize' type='range' name='textShadowSize' min='-10' max='10' step='.5' value='0' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='textShadowBlur'>TEXT-SHADOW-BLUR:<span id='textShadowBlurDisplay'class='valueDisplay'>0px</span></label>
+<input id='textShadowBlur' type='range' name='textShadowBlur' min='0' max='10' step='.5' value='0' data-sizing='px'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='textShadowColor'>TEXT-SHADOW COLOR:</label>
+<input id='textShadowColor' type='color' name='textShadowColor' value='#000000' list='MasterC'>
+    </div>
+  
+  <hr class='hrTop'>
+  <span class='section'>BORDER AND OUTLINE</span>
+  <hr class='hrBottom'>
+  
+  <div class='flexRow'>
+  <label for='borderR'>BORDER-RADIUS:<span id='borderRDisplay'class='valueDisplay'>0px</span></label>
+<input id='borderR' type='range' name='borderR' min='0' max='50' step='1' value='0' data-sizing='%'>
+   </div>
+  
+  <div class='flexRow'>
+  <label for='borderW'>BORDER-WIDTH:<span id='borderWDisplay'class='valueDisplay'>10px</span></label>
+<input id='borderW' type='range' name='borderW' min='0' max='30' step='1' value='1' data-sizing='px'>
+   </div>
+  
+  <div class='flexRow'>
+   <label for='borderS'>BORDER-STYLE:</label>
+  <select name="borderS" id='borderS' onclick='borderStyle()'>
+    <optgroup label='{PICK A STYLE}'></optgroup>
+    <option value="solid">SOLID</option>
+    <option value="dotted">DOTTED</option>
+    <option value="dashed">DASHED</option>
+    <option value="double">DOUBLE</option>
+    <option value="inset">INSET</option>
+    <option value="outset">OUTSET</option>
+    <option value="groove">GROOVE</option>
+    <option value="ridge">RIDGE</option>
+  </select>
+   </div>
+  
+   <div class='flexRow'>
+  <label for='borderC'>BORDER COLOR:</label>
+<input id='borderC' type='color'name='borderC' value='#000000' list='MasterC'>
+    </div>
+  
+  <div class='flexRow'>
+  <label for='outlineSize'>OUTLINE-SIZE:<span id='outlineSizeDisplay'class='valueDisplay'>0px</span></label>
+<input id='outlineSize' type='range' name='outlineSize' min='0' max='30' step='1' value='0' data-sizing='px'>
+   </div>
+  
+  <div class='flexRow'>
+  <label for='outlineOffset'>OUTLINE-OFFSET:<span id='outlineOffsetDisplay'class='valueDisplay'>0px</span></label>
+<input id='outlineOffset' type='range' name='outlineOffset' min='0' max='40' step='1' value='0' data-sizing='px'>
+   </div>
+  
+  <div class='flexRow'>
+   <label for='outlineStyle'>OUTLINE-STYLE:</label>
+  <select name="outlineStyle" id='outlineStyle' onclick='outlineStyler()'>
+    <optgroup label='{PICK A STYLE}'></optgroup>
+    <option value="solid">SOLID</option>
+    <option value="dotted">DOTTED</option>
+    <option value="dashed">DASHED</option>
+    <option value="double">DOUBLE</option>
+    <option value="inset">INSET</option>
+    <option value="outset">OUTSET</option>
+    <option value="groove">GROOVE</option>
+    <option value="ridge">RIDGE</option>
+  </select>
+   </div>
+  
+   <div class='flexRow'>
+  <label for='outlineColor'>OUTLINE COLOR:</label>
+<input id='outlineColor' type='color'name='outlineColor' value='#000000' list='MasterC'>
+    </div>
+ 
+</div><!--END OF WRAPPER FOR CONTROLS-->
+
+<!--THE ACTUAL BOX USER IS EDITTING-->
+<div class='outerBox'>
+<div id='testBox'>
+  <p id='testType'>CSS SANDBOX!!!</p>
+  </div>
+</div>
+
+<!--USER CREATED OUTPUT CODE-->
+<p id='output'></p>
+
+<!--HELP MENU-->
+<div id='help'>
+  <div id='modal'>
+    
+<h1>CSS SANDBOX HELP</h1>
+    <input type='button' id='modalButton' onclick='toggleHelp()' value='HIDE HELP' name='modalButton'>
+      
+<h2>Menu</h2>
+    
+<ol>
+<li><a href='#intro'>INTRO</a></li>
+<li><a href='#about'>ABOUT</a></li>
+<li><a href='#sliders'>SLIDERS</a></li>
+<li><a href='#color'>COLOR</a></li>
+<li><a href='#textOutline'>TEXT-OUTLINE</a></li>
+<li><a href='#googleFonts'>GOOGLE-FONTS</a></li>
+</ol>
+ 
+<div id='intro'>
+  <h3>INTRO</h3>
+  <p>I appologize in advance if CSS Sandbox inputs look 'weird' on your browser.  I did my best to cover as main bases as I know how.  I guess it is a problem everyone that develops web sites will eventually run into.  I work only on chrome browser so I can't attest to what this page looks like on anything else.  Hopefully, in the future, as my skills grow I will be able to test these cross browser issues.  For now, I'm sorry.</p>
+  <a href='#modal' class='backLink'>BACK UP</a>
+  </div>
+    
+<div id='about'>
+  <h3>ABOUT</h3>
+  <p>Hello, and welcome to CSS Sandbox.  I created this VERY modest web app after being inspired by <a href="https://javascript30.com/"target="_blank">Javascript 30 in 30</a>.  At the time of this app's creatation I have been coding for almost one month.  I learned how to tap into all the different controls with a couple lines of code and I nearly lost my mind.  The result is this app which let you, the user, generate a small snippet of code without having to write out any HTML or CSS!</p>
+  <p>I have a <a href='https://www.youtube.com/playlist?list=PLh6ckU65UHatB1fL867kj4Ca9Vgd_dlyJ'target="_blank">You Tube</a> series that chronicles the making of the app. If you are interested in seeing a rookie web developer stumble through code he barely understands, check it out.  It is both educational and entertaining.</p>
+  <p>Finally, enjoy playing around with CSS Sandbox.  I constructed everything WITHOUT the use of external libraries, frameworks or APIs.  Its flavor is VANILLA (as they say)  I had a blast!  CSS variables combined with Javascript open up a vast world of instant DOM manipulation and feedback.  There is something wonderful about creating something and being at the controls.</p>
+  <a href='#modal' class='backLink'>BACK UP</a>
+  </div>
+<div id='sliders'>
+  <h3>SLIDERS</h3>
+  <p>The input of type range is used heavily in this app.  They are the long skinny rectangles with the little oval inside.  Click and drag them around and see what happens.  You can even style the sliders themselves!  They also work on touch screens, but from what I've seen they are more responsive with a mouse.</p>
+  <p>If you are a developer you might notice that all the sliders have a unique look to them, much different than the "stock" look.  I didn't import any special files or plug-ins.  If you look in my css or visit <a href='https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/'target="_blank">CSS Tricks</a> you will find the css disaster that makes it happen.  My version is similar to there's with my own unique touches.</p>
+  <a href='#modal' class='backLink'>BACK UP</a>
+</div>
+  <div id='color'>
+    <h3>COLOR</h3>
+    <p>I have pre-selected black and white as the only color values present at start up.  This is to allow you, the user, as much freedom in creativity as possible.  I tried to keep my styling of elements to an minimum, outside of the basic skeleton of the page.  I have also modified the color pickers to display a small palette of colors that I think suit the element they are intended for the best.  For anyone reading this that has designed a page with a color picker; THE most annoying thing about them is that they only close by clicking the 'X' in the top corner(or escape on the keyboard).  On the other hand, my pre-selected palettes let you click the color or click beside the palette itself and the whole input closes.  A much faster and friendlier user experience.</p>
+    <a href='#modal' class='backLink'>BACK UP</a>
+    </div>
+  <div id='textOutline'>
+    <h3>TEXT-OUTLINE</h3>
+    <p>You may have noticed the text outline option in CSS Sandbox.  This is not an actual CSS style property.  I used a combination of shadows to mimic an outline.  I found a handy little site with the <a href="http://owumaro.github.io/text-stroke-generator/"target="_blank">Text Outline Hack</a> built in. I have only included the option to have the outline on or off. There is a toggle button.  The default setting is on and white.  I am hoping this will draw the user's attention when they switch background color's.  The width of the outline is simply one pixel, but you, the user, have the option of setting any color you want.</p>
+    <a href='#modal' class='backLink'>BACK UP</a>
+    </div>
+  <div id='googleFonts'>
+    <h3>GOOGLE FONTS</h3>
+    <p>At the time of this writing, I have not yet incorporated the google font link or @import information into the output code.  I may do so in the future.  For now, if you use a google font you can go to <a href='https://fonts.google.com/'target="_blank">Google Fonts</a> and find the required code. OR you can enter the following code into the HEAD section of your page.<pre>link href="https://fonts.googleapis.com/css?<br>family=Aladin|Barrio|Poiret+One" rel="stylesheet"></pre>Don't forget the less than symbol before link.  I can't get it to show up as the editor reads it as code.  Use | to seperate multiple fonts and + to enter multiple word fonts.  For example, the code above would add three fonts: Aladin, Barrio and Poiret One to your page. A little complicated for an absolute beginner, but a must have skill to access external dependencies.</p>
+    <a href='#modal' class='backLink'>BACK UP</a>
+    </div>
+  </div>
+
+<datalist id="MasterC">
+              <option>#FF0B0B</option>
+              <option>#FF900B</option>
+              <option>#FFFB0B</option>
+              <option>#6BFF0B</option>
+              <option>#00FF55</option>
+              <option>#00FFF0</option>
+              <option>#0036FF</option>
+              <option>#8700FF</option>
+              <option>#FF00FB</option>
+              <option>#FF0080</option>
+              <option>#ffb3b3</option>
+              <option>#ffdfb3</option>
+              <option>#dbffb3</option>
+              <option>#b3ffc0</option>
+              <option>#c4fff7</option> 
+              <option>#c4e5ff</option>
+              <option>#c4ccff</option>
+              <option>#dcc4ff</option> 
+              <option>#f5c4ff</option>
+              <option>#ffc4e6</option>
+              <option>#2e2e2e</option>
+              <option>#616161</option>
+              <option>#939393</option>
+              <option>#bfbfbf</option>
+              <option>#e3e3e3</option>
+              <option>#000000</option>
+              <option>#3c241f</option>
+              <option>#561212</option>
+              <option>#525612</option>
+              <option>#275612</option> 
+              <option>#12563c</option>
+              <option>#123456</option>
+              <option>#331256</option>
+              <option>#561249</option>
+  <option>#FFFFFF</option>
+            </datalist>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
