@@ -23,3 +23,7 @@ where I got the idea for this in the first place.
 As I learn more and more, I plan on improving **CSS SANDBOX**.  Right now you
 are stuck with just a div.  I think I would like to let the user create elements,
 but that is for a later time.  I have so many ideas.
+
+### IDEAS
+I am open to new ideas for the Noob Saibot Team.  I am thinking that turning
+this into a card/panel factory would be an interesting direction.
